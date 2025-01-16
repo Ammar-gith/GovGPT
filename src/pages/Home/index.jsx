@@ -3,7 +3,7 @@ const Home = () => {
         <div className="home container mx-auto p-4">
             <div className="flex justify-center items-center h-screen">
                 <div className="max-w-5xl border border-gray-50 p-4">
-                    <h2 className="text-2xl font-bold">Disclaimer</h2>
+                    <h2 className="text-2xl font-bold mb-3 text-center">Disclaimer</h2>
                     <p>The Govt GPT application is designed to assist users by providing information and answering queries strictly based on the content of the following official documents:</p>
                     <ul>
                         <li>* Esta Code 2024</li>
