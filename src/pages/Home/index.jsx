@@ -5,7 +5,7 @@ const Home = () => {
                 <div className="max-w-5xl border border-gray-50 p-4">
                     <h2 className="text-2xl font-bold mb-3 text-center">Disclaimer</h2>
                     <p>The Govt GPT application is designed to assist users by providing information and answering queries strictly based on the content of the following official documents:</p>
-                    <ul>
+                    <ul className="mb-3">
                         <li>* Esta Code 2024</li>
                         <li>* KP Policy on Agriculture</li>
                         <li>* The Khyber Pakhtunkhwa Sales Tax on Services Act 2022</li>
