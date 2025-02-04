@@ -12,6 +12,7 @@ import NotFound from "../pages/NotFound";
 import Dashboard from "../pages/Dashboard";
 import ChatBox from "../pages/Dashboard/ChatBox";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const AppRoutes = () => {
     return (
@@ -31,6 +32,7 @@ const AppRoutes = () => {
                     <Route path="chat" element={<ChatBox />} />
                     <Route path="history" element={<History />} />
                     <Route path="history/:id" element={<History />} />
+                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 </Route>
 
                 {/* 404 Page */}

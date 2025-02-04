@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Popup from "../Popup";
 
+import { FaUser } from "react-icons/fa";
+
 const DashboardHeader = ({ toggleSidebar }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -75,11 +77,7 @@ const DashboardHeader = ({ toggleSidebar }) => {
                             aria-expanded={isDropdownOpen}
                         >
                             <span className="sr-only">Open user menu</span>
-                            <img
-                                src="https://via.placeholder.com/40"
-                                alt="User Avatar"
-                                className="rounded-full"
-                            />
+                            <FaUser className="text-gray-500" size={20} />
                         </button>
                         {isDropdownOpen && (
                             <div className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">

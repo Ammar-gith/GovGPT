@@ -1,7 +1,7 @@
 const Home = () => {
     return (
-        <div className="home container mx-auto p-4">
-            <div className="flex justify-center items-center h-screen">
+        <section className="home container mx-auto p-4">
+            <div className="flex justify-center items-center min-h-screen">
                 <div className="max-w-5xl border border-gray-50 p-4">
                     <h2 className="text-2xl font-bold mb-3 text-center">Disclaimer</h2>
                     <p>The Govt GPT application is designed to assist users by providing information and answering queries strictly based on the content of the following official documents:</p>
@@ -17,7 +17,7 @@ const Home = () => {
                     <p>For further clarification or feedback, please contact the relevant department directly..</p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
