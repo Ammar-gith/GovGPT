@@ -15,7 +15,7 @@ const DashboardHome = () => {
         }
     };
     return (
-        <div className="flex flex-col h-[calc(100vh-80px)] bg-gray-100">
+        <div className="flex-1 flex-col h-screen bg-gray-100">
             {/* Message Display Area */}
             {/* <div className="flex-grow overflow-y-auto p-4 space-y-4 chat-scrollbar">
                 <div className="">

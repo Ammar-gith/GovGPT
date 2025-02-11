@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// const plugin = require("tailwindcss/plugin");
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -24,5 +25,25 @@ export default {
       },
     },
   },
-  plugins: [],
+  // plugins: [
+  //   plugin(function ({ addUtilities }) {
+  //     addUtilities({
+  //       ".chat-scrollbar": {
+  //         "&::-webkit-scrollbar": {
+  //           width: "6px",
+  //         },
+  //         "&::-webkit-scrollbar-track": {
+  //           background: "transparent",
+  //         },
+  //         "&::-webkit-scrollbar-thumb": {
+  //           background: "#888",
+  //           borderRadius: "3px",
+  //         },
+  //         "&::-webkit-scrollbar-thumb:hover": {
+  //           background: "#555",
+  //         },
+  //       },
+  //     });
+  //   }),
+  // ],
 };
