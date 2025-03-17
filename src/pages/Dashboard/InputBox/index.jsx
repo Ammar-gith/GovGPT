@@ -3,29 +3,30 @@ import { useState, useRef } from "react";
 
 const InputBox = ({ handleSendMessage }) => {
     const [inputValue, setInputValue] = useState("");
-    const inputRef = useRef(); // Ref to access the textarea DOM node
+    const inputRef = useRef(null); // Initialize ref properly
 
     const handleSend = () => {
         if (!inputValue.trim()) return;
         handleSendMessage(inputValue); // Send the input message to parent
         setInputValue(""); // Clear the input field
-        // Optionally clear the textarea using the ref
-        if (inputRef.current) {
-            inputRef.current.value = "";
-        }
     };
 
     return (
         <div className="w-full">
-            <div className="relative p-4">
+            <div className="relative p-2">
                 <div className="w-full relative">
                     <textarea
                         ref={inputRef} // Attach ref to the textarea
-                        className="outline outline-1 outline-darkgreen w-full p-4 bg-transparent rounded-sm"
+                        className="outline-none w-full p-2 bg-transparent rounded-sm"
                         placeholder="Enter Message..."
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)} // State updates value
-                        onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
+                        value={inputValue} // Controlled component
+                        onChange={(e) => setInputValue(e.target.value)} // Update state
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" && !e.shiftKey) {
+                                e.preventDefault(); // Prevent newline
+                                handleSend();
+                            }
+                        }}
                     />
                     <button
                         type="submit"

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // const plugin = require("tailwindcss/plugin");
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -18,6 +19,9 @@ export default {
       },
       backgroundImage: {
         "login-bg": "url('./src/assets/imgs/login-bg.jpg')",
+        "home-hero": "url('./src/assets/imgs/govgpt-hero.png')",
+        "islamia-collage": "url('./src/assets/imgs/islamia-collage.jpg')",
+        "bab-e-khyber-gate": "url('./src/assets/imgs/bab-e-khyber-gate.jpg')",
       },
       boxShadow: {
         custom:
@@ -25,25 +29,5 @@ export default {
       },
     },
   },
-  // plugins: [
-  //   plugin(function ({ addUtilities }) {
-  //     addUtilities({
-  //       ".chat-scrollbar": {
-  //         "&::-webkit-scrollbar": {
-  //           width: "6px",
-  //         },
-  //         "&::-webkit-scrollbar-track": {
-  //           background: "transparent",
-  //         },
-  //         "&::-webkit-scrollbar-thumb": {
-  //           background: "#888",
-  //           borderRadius: "3px",
-  //         },
-  //         "&::-webkit-scrollbar-thumb:hover": {
-  //           background: "#555",
-  //         },
-  //       },
-  //     });
-  //   }),
-  // ],
+  plugins: [],
 };

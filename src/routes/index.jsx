@@ -21,6 +21,7 @@ const AppRoutes = () => {
                 {/* Public Routes with Public Layout */}
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
+                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                 </Route>
@@ -32,7 +33,6 @@ const AppRoutes = () => {
                     <Route path="chat" element={<ChatBox />} />
                     <Route path="history" element={<History />} />
                     <Route path="history/:id" element={<History />} />
-                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 </Route>
 
                 {/* 404 Page */}

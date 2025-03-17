@@ -1,9 +1,9 @@
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-white text-center py-4">
-            <p>&copy; {new Date().getFullYear()} GovGPT. All rights reserved.</p>
+        <footer className="text-center p-4 text-sm border-t">
+            <a href="https://www.kpitb.gov.pk/" target="_blank" className="text-darkgreen">© Copyright 2025 Khyber Pakhtunkhwa Information Technology Board. All Rights Reserved.</a>
         </footer>
     );
-};
+}
 
 export default Footer;

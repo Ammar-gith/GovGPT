@@ -16,15 +16,8 @@ const DashboardHome = () => {
     };
     return (
         <div className="flex-1 flex-col h-screen bg-gray-100">
-            {/* Message Display Area */}
-            {/* <div className="flex-grow overflow-y-auto p-4 space-y-4 chat-scrollbar">
-                <div className="">
-                    <h1 className="text-4xl font-bold font-poppins text-center">What can I help with? </h1>
-                </div>
-            </div> */}
-
             {/* InputBox Component */}
-            <div className="bg-[#e6e5e5] rounded-2xl mt-4">
+            <div className="rounded-2xl m-4">
                 <div className="w-full">
                     <ChatBox />
                 </div>
