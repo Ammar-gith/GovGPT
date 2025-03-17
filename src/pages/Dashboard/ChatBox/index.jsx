@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ChatMessage from "../ChatMessage";
 import InputBox from "../InputBox";
 import { askGovGPT } from "../../../../api/govgpt";
-import SuggestedPrompts from "../../../components/suggestedPrompts";
+import SuggestedPrompts from "../../../components/SggestedPrompts";
 
 const ChatBox = () => {
     const [messages, setMessages] = useState([]);
