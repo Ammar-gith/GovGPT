@@ -45,7 +45,7 @@ const ChatMessage = ({ sender, text }) => {
                 {contextData && (
                     <button
                         onClick={() => setIsPopupOpen(true)}
-                        className="text-darkgreen underline text-xs"
+                        className="text-darkgreen underline ml-1 text-xs"
                     >
                         View More
                     </button>
