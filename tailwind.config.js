@@ -18,10 +18,10 @@ export default {
         goldenyellow: "#FFC107",
       },
       backgroundImage: {
-        "login-bg": "url('./src/assets/imgs/login-bg.jpg')",
-        "home-hero": "url('./src/assets/imgs/govgpt-hero.png')",
-        "islamia-collage": "url('./src/assets/imgs/islamia-collage.jpg')",
-        "bab-e-khyber-gate": "url('./src/assets/imgs/bab-e-khyber-gate.jpg')",
+        "login-bg": "url('/imgs/login-bg.jpg')",
+        "home-hero": "url('/imgs/govgpt-hero.png')",
+        "islamia-collage": "url('/imgs/islamia-collage.jpg')",
+        "bab-e-khyber-gate": "url('/imgs/bab-e-khyber-gate.jpg')",
       },
       boxShadow: {
         custom:
