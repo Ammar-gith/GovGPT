@@ -64,7 +64,7 @@ const ChatMessage = ({ sender, text }) => {
                         >
                             <FaTimes size={20} />
                         </button>
-                        <h2 className="text-lg font-bold mb-4">All Data</h2>
+                        <h2 className="text-lg font-bold mb-4">Details</h2>
                         <pre className="text-gray-800 text-sm whitespace-pre-wrap">{contextData}</pre>
                     </div>
                 </div>

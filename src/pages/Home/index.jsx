@@ -36,15 +36,11 @@ const Home = () => {
 
                 {/* Content */}
                 <section className="relative w-full max-w-[767px] m-auto text-center px-6 py-28 md:px-10 md:py-60">
-                    <h2 className="text-4xl text-white md:text-5xl font-bold">
-                        Your Digital Assistant for Government Services
-                    </h2>
-                    <p className="text-2xl mt-2 text-white">
-                        Submit your queries and get instant solutions for all government-related concerns.
-                    </p>
+                    <h2 className="text-4xl text-white md:text-5xl font-bold"> Your Digital Assistant for Government Policies </h2>
+                    <p className="text-2xl mt-2 text-white"> Get instant, accurate answers to your government-related queries based on official policies and regulations. </p>
                     <div className="mt-6 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
                         <button className="bg-black text-white px-6 py-2 rounded">
-                            <Link to={"/chat"}>Start Chat</Link>
+                            <Link to={"/dashboard"}>Start Chat</Link>
                         </button>
                     </div>
                 </section>

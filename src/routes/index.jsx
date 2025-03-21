@@ -16,7 +16,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const AppRoutes = () => {
     return (
-        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <BrowserRouter>
             <Routes>
                 {/* Public Routes with Public Layout */}
                 <Route element={<Layout />}>
@@ -27,10 +27,10 @@ const AppRoutes = () => {
                 </Route>
 
                 {/* Dashboard Routes with Dashboard Layout */}
-                <Route path="/chat" element={<DashboardLayout><Dashboard /></DashboardLayout>}>
+                <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>}>
                     <Route index element={<DashboardHome />} />
                     {/* <Route index element={<ChatBox />} /> */}
-                    <Route path="new-chat" element={<ChatBox />} />
+                    <Route path="chat" element={<ChatBox />} />
                     <Route path="history" element={<History />} />
                     <Route path="history/:id" element={<History />} />
                 </Route>
