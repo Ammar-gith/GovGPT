@@ -9,9 +9,9 @@ const Header = () => {
 
     const menuItems = [
         { name: "Home", link: "/" },
-        { name: "Chat", link: "/dashboard" },
-        { name: "Fake News", link: "#fake-news" },
-        { name: "Privacy Policy", link: "#policy" }
+        { name: "Chat", link: "/chat" },
+        // { name: "Fake News", link: "#fake-news" },
+        { name: "Policy Links", link: "#policy" }
     ]
 
     return (

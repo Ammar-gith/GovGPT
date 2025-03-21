@@ -49,12 +49,13 @@ const ChatBox = () => {
                 )}
             </div>
 
-            <div className="sticky bottom-3 pt-4">
+            <div className="sticky bottom-1 pt-4">
                 {/* Show Suggested Prompts only if no message has been sent */}
                 {showSuggestedPrompts && <SuggestedPrompts onPromptClick={handleSendMessage} />}
                 <div className="bg-white shadow-md rounded-2xl">
                     <InputBox handleSendMessage={handleSendMessage} />
                 </div>
+                <p className="text-center mt-1 font-poppins text-xs">GovGPT can make mistakes. Check important info.</p>
             </div>
         </div>
     );

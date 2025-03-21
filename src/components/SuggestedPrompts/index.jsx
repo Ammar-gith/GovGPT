@@ -1,9 +1,9 @@
 const SuggestedPrompts = ({ onPromptClick }) => {
     const allSuggestedPrompts = [
-        "What is the role of the Khyber Pakhtunkhwa Public Service Commission in the recruitment policy?",
-        "What role does the Administrative Department play in processing deputation or inter-provincial transfer requests?",
-        "What is emphasized regarding adherence to the Provincial Government's policy on deputation?",
-        "Where can the audit be conducted with the Collector's permission?",
+        "What is the main difference between ad-hoc and contract hiring in KP government jobs?",
+        "What are the eligibility requirements for someone applying for a government job in KP?",
+        "List three factors that could disqualify a candidate from being appointed to a government job.",
+        "How is the zonal allocation system used in recruitment?",
     ];
     return (
         <>

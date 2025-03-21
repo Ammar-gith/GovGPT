@@ -16,8 +16,8 @@ const Home = () => {
         },
         {
             "icon": "FaGavel",
-            "title": "Connect with Officials",
-            "desc": "Reach out to relevant government officials and departments for assistance with your concerns."
+            "title": "Laws & Policy Insights",
+            "desc": "Get precise and up-to-date details on government rules, regulations, and compliance requirements based on official documents."
         }
     ]
 
@@ -44,7 +44,7 @@ const Home = () => {
                     </p>
                     <div className="mt-6 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
                         <button className="bg-black text-white px-6 py-2 rounded">
-                            <Link to={"/dashboard"}>Start Chat</Link>
+                            <Link to={"/chat"}>Start Chat</Link>
                         </button>
                     </div>
                 </section>
@@ -66,6 +66,16 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* FAQs */}
+            {/* <section id="faqs" className="w-full p-6">
+                <div className="container m-auto">
+                    <div className="text-center font-poppins font-bold text-3xl">FAQs</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 md:p-14 lg:p-28">
+
+                    </div>
+                </div>
+            </section> */}
+
             {/* Policy Links */}
             <section id="policy" className="w-full p-6">
                 <div className="container m-auto bg-gray-200 rounded-lg px-6 py-28 md:px-10 md:py-20 shadow-sm bg-bab-e-khyber-gate bg-cover bg-center overflow-hidden relative">
@@ -86,7 +96,7 @@ const Home = () => {
             </section>
 
             {/* Fake News */}
-            <section id="fake-news" className="w-full bg-white px-6 py-16 md:px-6 md:py-10">
+            {/* <section id="fake-news" className="w-full bg-white px-6 py-16 md:px-6 md:py-10">
                 <div className="container m-auto">
                     <h2 className="text-center font-poppins text-3xl font-bold mb-6">Fake News</h2>
                     <div className="flex flex-wrap md:flex-nowrap gap-4 bg-black p-10 justify-between items-center rounded-lg">
@@ -98,7 +108,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };

@@ -44,7 +44,7 @@ import DashboardLayout from "./DashboardLayout";
 
 const Layout = () => {
     const location = useLocation();
-    const isDashboard = location.pathname.startsWith('/dashboard');
+    const isDashboard = location.pathname.startsWith('/chat');
 
     return (
         <>

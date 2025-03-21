@@ -27,10 +27,10 @@ const AppRoutes = () => {
                 </Route>
 
                 {/* Dashboard Routes with Dashboard Layout */}
-                <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>}>
+                <Route path="/chat" element={<DashboardLayout><Dashboard /></DashboardLayout>}>
                     <Route index element={<DashboardHome />} />
                     {/* <Route index element={<ChatBox />} /> */}
-                    <Route path="chat" element={<ChatBox />} />
+                    <Route path="new-chat" element={<ChatBox />} />
                     <Route path="history" element={<History />} />
                     <Route path="history/:id" element={<History />} />
                 </Route>
