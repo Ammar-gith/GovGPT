@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import AuthModal from "../AuthModal/AuthModal";
 
-const Header = () => {
+const Header = ({ policyRef }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     // const [isAuthOpen, setIsAuthOpen] = useState(false);
 
@@ -11,8 +11,16 @@ const Header = () => {
         { name: "Home", link: "/" },
         { name: "Chat", link: "/dashboard" },
         // { name: "Fake News", link: "#fake-news" },
-        { name: "Policy Links", link: "#policy" }
+        { name: "Policy Links", link: "#policy", isScroll: true }
     ]
+
+    const handleScroll = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        setMenuOpen(false);
+    };
 
     return (
         <header className="w-full relative p-4 shadow-md bg-white dark:bg-gray-900">
@@ -26,13 +34,22 @@ const Header = () => {
                         <ul className="flex flex-col md:flex-row md:space-x-4 p-4 md:p-0">
                             {menuItems.map((item, index) => (
                                 <li key={index}>
-                                    <Link
-                                        to={item.link}
-                                        className="block p-2 font-medium"
-                                        onClick={() => setMenuOpen(false)}
-                                    >
-                                        {item.name}
-                                    </Link>
+                                    {item.isScroll ? (
+                                        <button
+                                            className="block p-2 font-medium"
+                                            onClick={() => handleScroll("policy")}
+                                        >
+                                            {item.name}
+                                        </button>
+                                    ) : (
+                                        <Link
+                                            to={item.link}
+                                            className="block p-2 font-medium"
+                                            onClick={() => setMenuOpen(false)}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>
