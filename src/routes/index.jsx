@@ -16,7 +16,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const AppRoutes = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <Routes>
                 {/* Public Routes with Public Layout */}
                 <Route element={<Layout />}>
