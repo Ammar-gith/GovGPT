@@ -39,8 +39,8 @@ const Home = () => {
                     <h2 className="text-4xl text-white md:text-5xl font-bold"> Your Digital Assistant for Government Policies </h2>
                     <p className="text-2xl mt-2 text-white"> Get instant, accurate answers to your government-related queries based on official policies and regulations. </p>
                     <div className="mt-6 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                        <button className="bg-black text-white px-6 py-2 rounded">
-                            <Link to={"/dashboard"}>Start Chat</Link>
+                        <button className="bg-white text-black px-10 py-3 rounded">
+                            <Link to={"/dashboard"} className="font-semibold">Start Chat</Link>
                         </button>
                     </div>
                 </section>
