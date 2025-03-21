@@ -47,7 +47,7 @@ const DashboardHeader = ({ toggleSidebar }) => {
             <div className="flex items-center justify-between px-4 py-2 border-b bg-white z-10 shadow-md w-full">
                 {/* Left: Logo or Menu Button */}
                 <div className="flex items-center space-x-2">
-                    <button onClick={toggleSidebar} className="p-2 rounded-md hover:bg-gray-100">
+                    <button onClick={toggleSidebar} className="p-2 rounded-md md:hidden hover:bg-gray-100">
                         <svg
                             width="24"
                             height="24"
