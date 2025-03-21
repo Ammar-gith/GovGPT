@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import AuthModal from "../AuthModal/AuthModal";
 
-const Header = ({ policyRef }) => {
+const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     // const [isAuthOpen, setIsAuthOpen] = useState(false);
 
