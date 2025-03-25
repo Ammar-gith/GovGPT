@@ -66,10 +66,11 @@ const ChatMessage = ({ sender, text = "" }) => {
             {!isUser && <FaRobot className="text-gray-500 mr-2" size={20} />}
             <div className={`max-w-xs p-3 rounded-lg text-sm ${isUser ? "bg-darkgreen text-white" : "bg-gray-200 text-gray-900"}`}>
                 <span className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: mainContent || "No response received." }} />
+                <br /><br />
 
                 {/* Show "View More" button only if Context exists */}
                 {contextData && (
-                    <button onClick={() => setIsPopupOpen(true)} className="text-darkgreen underline ml-1 text-xs">
+                    <button onClick={() => setIsPopupOpen(true)} className="rounded text-white w-full bg-gray-700 p-2 text-xs">
                         View More
                     </button>
                 )}
