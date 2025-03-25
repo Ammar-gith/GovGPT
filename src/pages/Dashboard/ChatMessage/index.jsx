@@ -59,7 +59,7 @@ const ChatMessage = ({ sender, text = "" }) => {
     mainContent = mainContent.replace(/^Answer:\s*\n*/, "Answer: "); // Ensure "Answer:" stays inline
 
     // Move "References:" to a new line and make it bold
-    mainContent = mainContent.replace(/References:/, "<strong>References:</strong>").trim();
+    mainContent = mainContent.replace(/References:/, "<strong>\nReferences:</strong>").trim();
 
     return (
         <div className={`flex items-start ${isUser ? "justify-end" : "justify-start"} mb-2`}>

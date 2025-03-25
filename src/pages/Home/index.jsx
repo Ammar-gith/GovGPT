@@ -1,4 +1,4 @@
-import { FaBook, FaBalanceScale, FaGavel, FaArrowRight, FaLongArrowAltRight } from "react-icons/fa";
+import { FaBook, FaBalanceScale, FaGavel, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {
