@@ -1,4 +1,4 @@
-import { FaBook, FaBalanceScale, FaGavel } from "react-icons/fa";
+import { FaBook, FaBalanceScale, FaGavel, FaArrowRight, FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -79,12 +79,37 @@ const Home = () => {
                     <div className="absolute inset-0 bg-black bg-opacity-70"></div>
                     <div className="relative z-10">
                         <div className="container m-auto px-6 py-28 md:px-10 md:py-20">
-                            <h2 className="text-center font-poppins text-white text-3xl font-bold mb-6">Policy Links</h2>
-                            <h3 className="text-center font-poppins text-white text-xl font-medium w-full md:max-w-[1024px] m-auto mb-6">The Govt GPT application is designed to assist users by providing information and answering queries strictly based on the content of the following official documents.</h3>
+                            <h2 className="text-center font-poppins text-white text-3xl font-bold mb-6">
+                                Policy Links
+                            </h2>
+                            <h3 className="text-center font-poppins text-white text-xl font-medium w-full md:max-w-[1024px] m-auto mb-6">
+                                The Govt GPT application is designed to assist users by providing information and answering queries strictly based on the content of the following official documents.
+                            </h3>
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                <Link to={"https://drive.google.com/file/d/1aQQkvCc-KzFFhGBzb6uhV1hOEIb-rEHN/view?usp=sharing"} target="_blank" className="block rounded-lg text-white border border-white p-4 hover:bg-muted/50">ESTACODE 2024</Link>
-                                <Link to={"https://drive.google.com/file/d/1Q_WUXEqFXCH76OVt8M5wLj63qB0yq6oe/view?usp=sharing"} target="_blank" className="block rounded-lg text-white border border-white p-4 hover:bg-muted/50">Executive Handbook 2024</Link>
-                                <Link to={"https://drive.google.com/file/d/1r_Dh_Fd0db4Rsk8Wo9SGn-mKi5Ouz5O_/view?usp=sharing"} target="_blank" className="block rounded-lg text-white border border-white p-4 hover:bg-muted/50">Khyber Pakhtunkhwa Government Rules of Business, 1985</Link>
+                                <Link
+                                    to={"https://drive.google.com/file/d/1aQQkvCc-KzFFhGBzb6uhV1hOEIb-rEHN/view?usp=sharing"}
+                                    target="_blank"
+                                    className="group flex items-center rounded-lg text-white border border-white p-4 hover:bg-muted/50 transition-all duration-300"
+                                >
+                                    <FaArrowRight className=" mr-2 transition-transform duration-300 group-hover:translate-x-1" width={16} height={16} />
+                                    ESTACODE 2024
+                                </Link>
+                                <Link
+                                    to={"https://drive.google.com/file/d/1Q_WUXEqFXCH76OVt8M5wLj63qB0yq6oe/view?usp=sharing"}
+                                    target="_blank"
+                                    className="group flex items-center rounded-lg text-white border border-white p-4 hover:bg-muted/50 transition-all duration-300"
+                                >
+                                    <FaArrowRight className=" mr-2 transition-transform duration-300 group-hover:translate-x-1" width={16} height={16} />
+                                    Executive Handbook 2024
+                                </Link>
+                                <Link
+                                    to={"https://drive.google.com/file/d/1r_Dh_Fd0db4Rsk8Wo9SGn-mKi5Ouz5O_/view?usp=sharing"}
+                                    target="_blank"
+                                    className="group flex items-center rounded-lg text-white border border-white p-4 hover:bg-muted/50 transition-all duration-300"
+                                >
+                                    <FaArrowRight className=" mr-2 transition-transform duration-300 group-hover:translate-x-1" width={16} height={16} />
+                                    Khyber Pakhtunkhwa Government Rules of Business, 1985
+                                </Link>
                             </div>
                         </div>
                     </div>
