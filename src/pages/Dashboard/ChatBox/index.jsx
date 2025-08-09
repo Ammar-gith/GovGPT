@@ -11,7 +11,7 @@ const ChatBox = () => {
     const [loading, setLoading] = useState(false);
 
     const handleSendMessage = async (userMessage) => {
-        setShowSuggestedPrompts(false);  // Hide suggested prompts
+        setShowSuggestedPrompts(false);
         setMessages(prev => [...prev, { sender: "user", text: userMessage }]);
         setLoading(true);
 
@@ -39,8 +39,13 @@ const ChatBox = () => {
     }, [messages]);
 
     return (
-        <div className="flex flex-col h-screen">
-            <div ref={chatBoxRef} className="flex-1 overflow-y-auto px-4 pt-4 chat-scrollbar" >
+        <div className="flex flex-col h-screen"> 
+            {/* Scrollable messages area */}
+            <div
+                ref={chatBoxRef}
+                className="flex-1 w-full overflow-y-auto pt-4 pb-24 chat-scrollbar"
+           
+            >
                 {messages.map((message, index) => (
                     <ChatMessage key={index} sender={message.sender} text={message.text} />
                 ))}
@@ -49,13 +54,17 @@ const ChatBox = () => {
                 )}
             </div>
 
-            <div className="sticky bottom-1 pt-4">
-                {/* Show Suggested Prompts only if no message has been sent */}
-                {showSuggestedPrompts && <SuggestedPrompts onPromptClick={handleSendMessage} />}
-                <div className="bg-white shadow-md rounded-2xl">
+            {/* Fixed input area */}
+            <div className="sticky bottom-0 bg-white">
+                {showSuggestedPrompts && (
+                    <SuggestedPrompts onPromptClick={handleSendMessage} />
+                )}
+                <div className="rounded-3xl">
                     <InputBox handleSendMessage={handleSendMessage} />
                 </div>
-                <p className="text-center mt-1 font-poppins text-xs">GovGPT can make mistakes. Check important info.</p>
+                <p className="text-center mb-2 font-poppins text-xs text-gray-500">
+                    GovGPT can make mistakes. Check important info.
+                </p>
             </div>
         </div>
     );

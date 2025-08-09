@@ -15,9 +15,9 @@ const DashboardHome = () => {
         }
     };
     return (
-        <div className="flex-1 flex-col h-screen bg-gray-100">
+        <div className="flex-1 flex-col h-screen">
             {/* InputBox Component */}
-            <div className="rounded-2xl m-4">
+            <div className="rounded-2xl">
                 <div className="w-full">
                     <ChatBox />
                 </div>

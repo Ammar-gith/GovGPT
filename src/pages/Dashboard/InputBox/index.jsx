@@ -9,28 +9,59 @@ const InputBox = ({ handleSendMessage }) => {
         if (!inputValue.trim()) return;
         handleSendMessage(inputValue); // Send the input message to parent
         setInputValue(""); // Clear the input field
+
+           // Reset textarea height to 1 row
+        if (inputRef.current) {
+            inputRef.current.style.height = "auto";
+        }
     };
+
+     const handleInput=(e) =>{
+        setInputValue(e.target.value);
+                            e.target.style.height = 'auto';
+                            e.target.style.height = e.target.scrollHeight + 'px';
+                        };
+
+    
 
     return (
         <div className="w-full">
             <div className="relative p-2">
                 <div className="w-full relative">
                     <textarea
+                        rows="1"
                         ref={inputRef} // Attach ref to the textarea
-                        className="outline-none w-full p-2 bg-transparent rounded-sm"
-                        placeholder="Enter Message..."
+                        className="  w-full 
+                            resize-none 
+                            bg-transparent 
+                            focus:ring-0 
+                            px-6 
+                            py-4 
+                            text-md 
+                            border 
+                            rounded-3xl
+                            border-gray-300
+                            placeholder-gray-500 
+                            leading-5
+                            max-h-40
+                            overflow-y-auto
+                            focus:outline-none
+                            shadow-md
+                            bg-white"
+                        placeholder="Ask anything"
                         value={inputValue} // Controlled component
-                        onChange={(e) => setInputValue(e.target.value)} // Update state
+                        onChange={handleInput}// Update state
                         onKeyDown={(e) => {
                             if (e.key === "Enter" && !e.shiftKey) {
                                 e.preventDefault(); // Prevent newline
                                 handleSend();
                             }
                         }}
-                    />
+                  
+                    ></textarea>
                     <button
                         type="submit"
-                        className="h-8 w-8 rounded-full bg-black text-white absolute right-2 bottom-3"
+                        className="h-8 w-8 rounded-full bg-black text-white absolute right-2 bottom-4"
                         onClick={handleSend}
                     >
                         <svg

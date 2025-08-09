@@ -12,7 +12,7 @@ const SuggestedPrompts = ({ onPromptClick }) => {
                 {allSuggestedPrompts.map((prompt, index) => (
                     <button
                         key={index}
-                        className="p-4 bg-gray-200 rounded-lg hover:bg-gray-300 text-left"
+                        className="p-4 bg-gray-100 rounded-lg hover:bg-green-50 text-left"
                         onClick={() => onPromptClick(prompt)}
                     >
                         {prompt}

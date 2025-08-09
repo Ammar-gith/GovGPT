@@ -23,10 +23,13 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full relative p-4 shadow-md bg-white dark:bg-gray-900">
+        <header className="w-full relative p-4 bg-white dark:bg-gray-900 border-b border-gray-200 shadow-sm dark:border-gray-700">
             <div className="container m-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">
-                    <Link to={"/"}>GovGPT</Link>
+                <h1 className=" ">
+                    <Link to={"/"} className="flex items-center gap-2">
+                        <img src="public/imgs/govgpt-img.png" alt="GovGPT Logo" className="w-25 h-10 object-contain" />
+                               {/* <span className="text-2xl font-bold text-green-700">GovGPT</span> */}
+                    </Link>
                 </h1>
                 <div className="flex gap-4">
                     {/* Navigation Menu */}
@@ -36,7 +39,7 @@ const Header = () => {
                                 <li key={index}>
                                     {item.isScroll ? (
                                         <button
-                                            className="block p-2 font-medium"
+                                            className="block p-2 font-medium hover:text-green-600 hover:underline transition-colors"
                                             onClick={() => handleScroll("policy")}
                                         >
                                             {item.name}
@@ -44,7 +47,7 @@ const Header = () => {
                                     ) : (
                                         <Link
                                             to={item.link}
-                                            className="block p-2 font-medium"
+                                            className="block p-2 font-medium hover:text-green-600 hover:underline transition-colors"
                                             onClick={() => setMenuOpen(false)}
                                         >
                                             {item.name}

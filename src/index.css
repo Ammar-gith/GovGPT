@@ -4,9 +4,8 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
+  height: auto;
+  overflow: auto;
 }
 
 /* Light Mode */
@@ -19,13 +18,38 @@ body {
   @apply bg-gray-900 text-white;
 }
 
+/* Works for Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 6px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2c1c1; /* Scroll thumb color */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb hover color */
+}
+
+/* Works for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c9c4c4 #f3f0f0; 
+}
+
+
 /* Custom Scrollbar */
 .sidebar-scrollbar::-webkit-scrollbar {
   width: 5px; /* Width of the scrollbar */
 }
 
 .sidebar-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #c4c4c4; /* Thumb color (gray) */
+  background-color: #dadada; /* Thumb color (gray) */
   border-radius: 4px; /* Rounded corners for the thumb */
 }
 
@@ -34,16 +58,24 @@ body {
 }
 
 /* Chatbox Scrollbar */
+.chat-scrollbar {
+  padding-right: 170px; /* Scrollbar ke liye extra space, adjust karo apne hisaab se */
+  /* margin-left: -3px; Scrollbar ke liye extra space, adjust karo apne hisaab se */
+  box-sizing: content-box; /* Taake padding content width ko affect na kare */
+  overflow-y: auto;
+}
+
 
 .chat-scrollbar::-webkit-scrollbar {
   width: 5px; /* Width of the scrollbar */
 }
 
 .chat-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #bebebe; /* Thumb color (gray) */
+  background-color: #c9c9c9; /* Thumb color (gray) */
   border-radius: 4px; /* Rounded corners for the thumb */
 }
 
 .chat-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #374151; /* Darker shade on hover */
 }
+

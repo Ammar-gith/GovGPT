@@ -44,27 +44,31 @@ const DashboardHeader = ({ toggleSidebar }) => {
 
     return (
         <header className="relative">
-            <div className="flex items-center justify-between px-4 py-2 border-b bg-white z-10 shadow-md w-full">
+            <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-white z-10 w-full">
                 {/* Left: Logo or Menu Button */}
                 <div className="flex items-center space-x-2">
-                    <button onClick={toggleSidebar} className="p-2 rounded-md md:hidden hover:bg-gray-100">
-                        <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon-lg mx-2 text-token-text-secondary"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z"
-                                fill="currentColor"
-                            ></path>
-                        </svg>
-                        <span className="sr-only">New chat</span>
-                    </button>
+                        <button onClick={toggleSidebar} className="p-2 rounded-md md:hidden hover:bg-gray-100">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon-lg mx-2 text-token-text-secondary"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                            <span className="sr-only">New chat</span>
+                        </button>
+                        {/* GovGpt Brand Text */}
+                        <span className="text-xl text-green-800 tracking-wide">
+                            GovGPT
+                        </span>
                 </div>
 
                 {/* Right: User Menu */}
@@ -73,12 +77,12 @@ const DashboardHeader = ({ toggleSidebar }) => {
                     <div className="relative" ref={dropdownRef}>
                         <button
                             onClick={toggleDropdown}
-                            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300"
+                            className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-200 hover:border-gray-300 bg-gray-50 hover:bg-green-50"
                             aria-haspopup="true"
                             aria-expanded={isDropdownOpen}
                         >
                             <span className="sr-only">Open user menu</span>
-                            <FaUser className="text-gray-500" size={20} />
+                            <FaUser className="text-gray-700" size={20} />
                         </button>
                         {isDropdownOpen && (
                             <div className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
@@ -125,25 +129,25 @@ const DashboardHeader = ({ toggleSidebar }) => {
                                     </button> */}
                                     {/* <hr className="my-1 border-gray-200" /> */}
                                     <Link
-                                        to="/"
-                                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="mr-3 h-5 w-5 text-gray-400"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                            <polyline points="16 17 21 12 16 7"></polyline>
-                                            <line x1="21" y1="12" x2="9" y2="12"></line>
-                                        </svg>
-                                        Log out
+                                            to="/"
+                                            className="flex items-center px-4 py-2 text-sm text-gray-800 hover:bg-green-50"
+                                            role="menuitem"
+                                            >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="mr-3 h-5 w-5 text-gray-800"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                 >
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                <polyline points="16 17 21 12 16 7"></polyline>
+                                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                                            </svg>
+                                            Log out
                                     </Link>
                                 </div>
                             </div>

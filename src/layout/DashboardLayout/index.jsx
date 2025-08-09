@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
+import Footer from "../../components/Footer";
 import DashboardHeader from "../../components/DashboardHeader";
 
 const DashboardLayout = ({ children }) => {
@@ -30,7 +31,7 @@ const DashboardLayout = ({ children }) => {
     };
 
     return (
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen">
             {/* Mobile Overlay */}
             {isMobile && isSidebarVisible && (
                 <div
@@ -54,7 +55,7 @@ const DashboardLayout = ({ children }) => {
                 <DashboardHeader toggleSidebar={toggleSidebar} />
 
                 {/* Scrollable Content */}
-                <main className="flex-1 overflow-auto bg-gray-100 p-3">
+                <main className="flex-1 overflow-hidden bg-white">
                     <div className="max-w-3xl mx-auto">{children || <Outlet />}</div>
                 </main>
             </div>
