@@ -17,9 +17,9 @@ const ChatMessage = ({ sender, text = "" }) => {
     mainContent = mainContent.replace(/References:/, "<strong>\nReferences:</strong>").trim();
 
     return (
-        <div className={`flex items-start ${isUser ? "justify-end" : "justify-start"} mb-2`}>
-            {!isUser && <FaRobot className="text-gray-500 mr-2" size={20} />}
-            <div className={`max-w-xs p-3 rounded-lg text-md ${isUser ? "bg-green-800 text-white" : "bg-gray-100 text-gray-900"}`}>
+        <div className={`flex items-start ${isUser ? "justify-end" : "justify-start"} mb-6`}>
+            {!isUser && <FaRobot className="text-gray-500 mr-2 mt-2" size={20} />}
+            <div className={`max-w-lg p-3  rounded-lg text-md ${isUser ? "bg-gray-100 text-gray-900" : "bg-gray-50 text-gray-900"}`}>
                 <span className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: mainContent || "No response received." }} />
                 <br /><br />
 

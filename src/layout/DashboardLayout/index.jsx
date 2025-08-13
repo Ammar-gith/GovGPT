@@ -2,33 +2,28 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
-import Footer from "../../components/Footer";
 import DashboardHeader from "../../components/DashboardHeader";
 
 const DashboardLayout = ({ children }) => {
     const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024); // Mobile detection
+    const [isOpen, setIsOpen] = useState(true); // moved from Sidebar
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
-    // Update sidebar state on window resize
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 1024);
             if (window.innerWidth < 1024) {
-                setIsSidebarVisible(false); // Auto-hide on mobile
+                setIsSidebarVisible(false);
             } else {
-                setIsSidebarVisible(true); // Show on desktop
+                setIsSidebarVisible(true);
             }
         };
-
         window.addEventListener("resize", handleResize);
-        handleResize(); // Set initial state
-
+        handleResize();
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const toggleSidebar = () => {
-        setIsSidebarVisible(!isSidebarVisible);
-    };
+    const toggleSidebar = () => setIsSidebarVisible(!isSidebarVisible);
 
     return (
         <div className="flex h-screen">
@@ -42,19 +37,21 @@ const DashboardLayout = ({ children }) => {
 
             {/* Sidebar */}
             <div
-                className={`fixed md:relative h-full bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out
-                ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"}
-                md:translate-x-0 md:w-64`}
+                className={`fixed md:relative h-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out
+                ${isSidebarVisible ? (isOpen ? "w-64" : "w-20") : "w-0"}
+                ${isSidebarVisible || isMobile ? "translate-x-0" : "-translate-x-full"}
+                md:translate-x-0`}
             >
-                <Sidebar />
+                <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col flex-1">
-                {/* Header */}
+            <div
+                className={`flex flex-col transition-all duration-300 ${
+                    isSidebarVisible ? (isOpen ? "md:ml-0" : "md:ml-0") : "md:ml-0"
+                } flex-1`}
+            >
                 <DashboardHeader toggleSidebar={toggleSidebar} />
-
-                {/* Scrollable Content */}
                 <main className="flex-1 overflow-hidden bg-white">
                     <div className="max-w-3xl mx-auto">{children || <Outlet />}</div>
                 </main>
