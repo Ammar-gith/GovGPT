@@ -59,9 +59,8 @@ body {
 
 /* Chatbox Scrollbar */
 .chat-scrollbar {
-  padding-right: 170px; /* Scrollbar ke liye extra space, adjust karo apne hisaab se */
-  /* margin-left: -3px; Scrollbar ke liye extra space, adjust karo apne hisaab se */
-  box-sizing: content-box; /* Taake padding content width ko affect na kare */
+  padding-right: 170px; 
+  box-sizing: content-box;
   overflow-y: auto;
 }
 

@@ -43,7 +43,7 @@ const ChatBox = () => {
             {/* Scrollable messages area */}
             <div
                 ref={chatBoxRef}
-                className="flex-1 w-full overflow-y-auto pt-4 pb-24 chat-scrollbar"
+                className="flex-1 w-full overflow-y-auto chat-scrollbar  pt-4 pb-24"
            
             >
                 {messages.map((message, index) => (
@@ -53,7 +53,7 @@ const ChatBox = () => {
                     <p className="text-sm italic text-gray-500 mb-4">GovGPT is typing...</p>
                 )}
             </div>
-
+            
             {/* Fixed input area */}
             <div className="sticky bottom-0 bg-white">
                 {showSuggestedPrompts && (
